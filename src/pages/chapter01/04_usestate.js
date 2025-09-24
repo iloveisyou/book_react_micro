@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+// 값으로 상태 갱신하기 
 export const ComponentUsestate = () => {
   const [count, setCount] = useState(0);
   

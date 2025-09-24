@@ -1,0 +1,10 @@
+.wrap {  text-align:center;
+  dl { display:flex; justify-content:center; margin:0; padding:0;
+    dt { margin:0 0 0 50px; padding:0; }
+    dd { margin:0; padding:0; 
+      &::before { content:': ';margin-right:5px; }
+      button { margin-top:0;margin-left:10px; }
+    }
+  }
+  button { margin-top:20px; }
+}

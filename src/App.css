@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.nav_list { display:flex; flex-direction:row; justify-content:flex-end; gap:30px; font-size:14px; }
+.nav_list .step { display:flex; flex-direction:column; justify-content:flex-start; align-items:flex-start; }
+.nav_list .step * { color:#ffffff;text-decoration:none;line-height:1.6; }
+.nav_list .step *:hover { text-decoration:underline; }
+
+body { text-align:center; }

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-// 함수로 상태 갱신하기
-export const ComponentUsestate5 = () => {
-  const [count, setCount] = useState(0);
+// 지연 초기화
+const init = () => 0;
+
+export const ComponentUsestate7 = () => {
+  const [count, setCount] = useState(init);
   
   return (
     <div>
