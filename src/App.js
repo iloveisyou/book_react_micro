@@ -54,6 +54,11 @@ function App() {
             <Link to="/chapter03/05_usecontext5">05_usecontext5</Link>
             <Link to="/chapter03/06_usecontext6">06_usecontext6</Link>
           </div>
+          <div className="step">
+            <Link to="/chapter04/01_module">01_module</Link>
+            <Link to="/chapter04/02_module2">02_module2</Link>
+            <Link to="/chapter04/03_subscribe">03_subscribe</Link>
+          </div>
         </nav>
       </header>
     </div>

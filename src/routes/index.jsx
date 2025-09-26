@@ -31,6 +31,9 @@ import { ComponentUsecontext3 } from '../pages/chapter03/03_usecontext3';
 import { ComponentUsecontext4 } from '../pages/chapter03/04_usecontext4';
 import { ComponentUsecontext5 } from '../pages/chapter03/05_usecontext5';
 import { ComponentUsecontext6 } from '../pages/chapter03/06_usecontext6';
+import { ComponentModule } from '../pages/chapter04/01_module';
+import { ComponentModule2 } from '../pages/chapter04/02_module2';
+import { ComponentSubscribe } from '../pages/chapter04/03_subscribe';
 
 const Home = () => <div>Home page</div>;
 const About = () => <div>About page</div>;
@@ -75,6 +78,11 @@ export const Router = () => {
         <Route path='04_usecontext4' element={<ComponentUsecontext4 />} />
         <Route path='05_usecontext5' element={<ComponentUsecontext5 />} />
         <Route path='06_usecontext6' element={<ComponentUsecontext6 />} />
+      </Route>
+      <Route path='/chapter04'>
+        <Route path='01_module' element={<ComponentModule />} />
+        <Route path='02_module2' element={<ComponentModule2 />} />
+        <Route path='03_subscribe' element={<ComponentSubscribe />} />
       </Route>
       <Route path="*" element={<Notfound />} />
     </Routes>
