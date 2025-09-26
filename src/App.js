@@ -58,6 +58,7 @@ function App() {
             <Link to="/chapter04/01_module">01_module</Link>
             <Link to="/chapter04/02_module2">02_module2</Link>
             <Link to="/chapter04/03_subscribe">03_subscribe</Link>
+            <Link to="/chapter04/04_usesubscription">04_usesubscription</Link>
           </div>
         </nav>
       </header>

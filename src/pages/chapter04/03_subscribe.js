@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 // const createStore = <T extends unknown>(initialState: T): Store<T> => {
-const createStore = (initialState) => {
+export const createStore = (initialState) => {
   let state = initialState;
   // const callbacks = new Set<()=> void>();
   const callbacks = new Set();
@@ -29,7 +29,7 @@ const store = createStore({count: 0});
 // store.subscribe();
 
 
-const useStore = (store) => {
+export const useStore = (store) => {
   const [state, setState] = useState(store.getState());
   // console.log(store);
   // console.log(state);

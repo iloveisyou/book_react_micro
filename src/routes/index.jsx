@@ -34,6 +34,7 @@ import { ComponentUsecontext6 } from '../pages/chapter03/06_usecontext6';
 import { ComponentModule } from '../pages/chapter04/01_module';
 import { ComponentModule2 } from '../pages/chapter04/02_module2';
 import { ComponentSubscribe } from '../pages/chapter04/03_subscribe';
+import { ComponentUsesubscription } from '../pages/chapter04/04_usesubscription';
 
 const Home = () => <div>Home page</div>;
 const About = () => <div>About page</div>;
@@ -83,6 +84,7 @@ export const Router = () => {
         <Route path='01_module' element={<ComponentModule />} />
         <Route path='02_module2' element={<ComponentModule2 />} />
         <Route path='03_subscribe' element={<ComponentSubscribe />} />
+        <Route path='04_usesubscription' element={<ComponentUsesubscription />} />
       </Route>
       <Route path="*" element={<Notfound />} />
     </Routes>
