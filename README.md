@@ -48,6 +48,9 @@
 - ECMAScript 2015/타입스크립트 4
 - npm add -D sass-embedded
 - npm install redux
+- npm install use-subscription
+- npm install react-redux
+- npm install zustand@4
 
 
 -----------------------------------------------------------------------------------------------------------------------

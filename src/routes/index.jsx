@@ -35,6 +35,12 @@ import { ComponentModule } from '../pages/chapter04/01_module';
 import { ComponentModule2 } from '../pages/chapter04/02_module2';
 import { ComponentSubscribe } from '../pages/chapter04/03_subscribe';
 import { ComponentUsesubscription } from '../pages/chapter04/04_usesubscription';
+import { ComponentUsesubscriptionEx } from '../pages/chapter04/05_usesubscriptionEx';
+import { ComponentModuleState } from '../pages/chapter05/01_moduleState';
+import { ComponentContextUse } from '../pages/chapter05/02_contextUse';
+import { ComponentContextPattern } from '../pages/chapter05/03_contextPattern';
+import { ComponentGlobalVariable } from '../pages/chapter06/01_globalVariable';
+import { ComponentZustand } from '../pages/chapter06/02_zustand';
 
 const Home = () => <div>Home page</div>;
 const About = () => <div>About page</div>;
@@ -85,6 +91,17 @@ export const Router = () => {
         <Route path='02_module2' element={<ComponentModule2 />} />
         <Route path='03_subscribe' element={<ComponentSubscribe />} />
         <Route path='04_usesubscription' element={<ComponentUsesubscription />} />
+        <Route path='05_usesubscriptionEx' element={<ComponentUsesubscriptionEx />} />
+      </Route>
+      <Route path='/chapter05'>
+        <Route path='01_moduleState' element={<ComponentModuleState />} />
+        <Route path='02_contextUse' element={<ComponentContextUse />} />
+        <Route path='03_contextPattern' element={<ComponentContextPattern />} />
+      </Route>
+      <Route path='/chapter06'>
+        <Route path='01_globalVariable' element={<ComponentGlobalVariable />} />
+        <Route path='02_zustand' element={<ComponentZustand />} />
+        
       </Route>
       <Route path="*" element={<Notfound />} />
     </Routes>
