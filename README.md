@@ -51,6 +51,10 @@
 - npm install use-subscription
 - npm install react-redux
 - npm install zustand@4
+- npm install jotai
+- npm install valtio
+- npm install @react-spring/web : transition
+- npm install react-tracked // 렌더링최적화
 
 
 -----------------------------------------------------------------------------------------------------------------------

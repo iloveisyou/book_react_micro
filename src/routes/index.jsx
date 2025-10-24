@@ -41,6 +41,11 @@ import { ComponentContextUse } from '../pages/chapter05/02_contextUse';
 import { ComponentContextPattern } from '../pages/chapter05/03_contextPattern';
 import { ComponentGlobalVariable } from '../pages/chapter06/01_globalVariable';
 import { ComponentZustand } from '../pages/chapter06/02_zustand';
+import { ComponentJotai } from '../pages/chapter06/03_jotai';
+import { ComponentValtio } from '../pages/chapter06/04_valtio';
+import { ComponentReactTracked } from '../pages/chapter06/05_reactTracked';
+
+// import { App } from '../../msmrh-main/chapter10/02_with_usestate/src/App';
 
 const Home = () => <div>Home page</div>;
 const About = () => <div>About page</div>;
@@ -101,6 +106,9 @@ export const Router = () => {
       <Route path='/chapter06'>
         <Route path='01_globalVariable' element={<ComponentGlobalVariable />} />
         <Route path='02_zustand' element={<ComponentZustand />} />
+        <Route path='03_jotai' element={<ComponentJotai />} />
+        <Route path='04_valtio' element={<ComponentValtio />} />
+        <Route path='05_reactTracked' element={<ComponentReactTracked />} />
         
       </Route>
       <Route path="*" element={<Notfound />} />

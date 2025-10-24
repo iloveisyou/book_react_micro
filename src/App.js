@@ -72,6 +72,9 @@ function App() {
             <p>06. 전역 상태 관리 라이브러리 소개</p>
             <Link to="/chapter06/01_globalVariable">01_globalVariable</Link>
             <Link to="/chapter06/02_zustand">02_zustand</Link>
+            <Link to="/chapter06/03_jotai">03_jotai</Link>
+            <Link to="/chapter06/04_valtio">04_valtio</Link>
+            <Link to="/chapter06/05_reactTracked">05_reactTracked</Link>
           </div>
         </nav>
       </header>
