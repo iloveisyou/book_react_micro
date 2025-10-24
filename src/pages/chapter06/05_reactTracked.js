@@ -20,7 +20,7 @@ const useFirstName = () => { // useContact(nameContact) 사용
 //   return <>{lastName}</>;
 // }
 
-// ---------------------------------------------------------------------- 변경가능한 갱신으로 코드 줄이기
+// ---------------------------------------------------------------------- 변경가능한 갱신으로 코드 줄이기 전 : createContext
 
 const useValue = () => useState({ count: 0, text: 'hello' });
 const StateContext = createContext(null);
@@ -47,6 +47,8 @@ const App = () => (<Provider2>
   <TextBox />
 </Provider2>);
 
+// ---------------------------------------------------------------------- 변경가능한 갱신으로 코드 줄이기 후 : useTracked
+
 const useValue2 = () => useState({ count: 0, text: 'hello' });
 const { Provider, useTracked } = createContainer(useValue2);
 const Counter2 = () => {
@@ -68,11 +70,10 @@ const App2 = () => (<Provider>
 
 // ---------------------------------------------------------------------- 원본소스
 
-const useValue = () => useState({ count: 0, text: "hello" });
+// const useValue = () => useState({ count: 0, text: "hello" });
+// const { Provider, useTracked } = createContainer(useValue);
 
-const { Provider, useTracked } = createContainer(useValue);
-
-const Counter = () => {
+const Counter3 = () => {
   const [state, setState] = useTracked();
   const inc = () => {
     setState((prev) => ({ ...prev, count: prev.count + 1 }));
@@ -84,9 +85,9 @@ const Counter = () => {
   );
 };
 
-const TextBox = () => {
+const TextBox3 = () => {
   const [state, setState] = useTracked();
-  const setText = (text: string) => {
+  const setText = (text) => {
     setState((prev) => ({ ...prev, text }));
   };
   return (
@@ -96,13 +97,13 @@ const TextBox = () => {
   );
 };
 
-const App = () => (
+const App3 = () => (
   <Provider>
     <div>
-      <Counter />
-      <Counter />
-      <TextBox />
-      <TextBox />
+      <Counter3 />
+      <Counter3 />
+      <TextBox3 />
+      <TextBox3 />
     </div>
   </Provider>
 );
@@ -128,6 +129,8 @@ export const ComponentReactTracked = () => {
       <App />
       <br /> &uarr;&uarr;&uarr; 속성 하나만 바뀌어도 다 바뀜 + 불필요한리렌더링 / &darr;&darr;&darr; React Tracked 사용
       <App2 />
+      <br /> 책원본 소스
+      <App3 />
 
 
     
