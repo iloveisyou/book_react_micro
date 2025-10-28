@@ -75,6 +75,9 @@ function App() {
             <Link to="/chapter06/03_jotai">03_jotai</Link>
             <Link to="/chapter06/04_valtio">04_valtio</Link>
             <Link to="/chapter06/05_reactTracked">05_reactTracked</Link>
+            <Link to="/chapter06/05_reactTracked2">05_reactTracked-2</Link>
+            <Link to="/chapter06/05_reactTracked3">05_reactTracked-3</Link>
+            <Link to="/chapter06/06_compare">06_compare</Link>
           </div>
         </nav>
       </header>

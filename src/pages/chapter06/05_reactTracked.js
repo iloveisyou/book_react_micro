@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState, useContext, useReducer, useEffect } from 'react';
 import { createContainer } from 'react-tracked';
 
 const initialNameState = {firstName: 'react', lastName: 'hooks'};
@@ -68,7 +68,7 @@ const App2 = () => (<Provider>
   <TextBox2 />
 </Provider>);
 
-// ---------------------------------------------------------------------- 원본소스
+// ---------------------------------------------------------------------- 바로위 소스의 원본소스
 
 // const useValue = () => useState({ count: 0, text: "hello" });
 // const { Provider, useTracked } = createContainer(useValue);
@@ -84,7 +84,6 @@ const Counter3 = () => {
     </div>
   );
 };
-
 const TextBox3 = () => {
   const [state, setState] = useTracked();
   const setText = (text) => {
@@ -96,7 +95,6 @@ const TextBox3 = () => {
     </div>
   );
 };
-
 const App3 = () => (
   <Provider>
     <div>
@@ -107,6 +105,7 @@ const App3 = () => (
     </div>
   </Provider>
 );
+
 
 
 export const ComponentReactTracked = () => {
@@ -129,11 +128,18 @@ export const ComponentReactTracked = () => {
       <App />
       <br /> &uarr;&uarr;&uarr; 속성 하나만 바뀌어도 다 바뀜 + 불필요한리렌더링 / &darr;&darr;&darr; React Tracked 사용
       <App2 />
-      <br /> 책원본 소스
+      <br /> 책원본 소스 (위 소스는 Provider > Count  vs  Provider > div > Count : div 여부에 따라서 리렌더링 차이가 남)
+      <br /> memo로 감싸여진 컴포넌트도 div로 안감싸주면 리렌더링 일어났는데.. 이부분 나중에 꼭 기억하고.... 패턴짜야할듯
+      <br /> 내 경우는 div(태그)를 하나 안쓸려고 엄청 노력하는데 그러다가 이런문제가 발생할까 무서움 (react 어려움)
       <App3 />
 
-
-    
+      <br /><br /><div>&diams; <strong>UseReducer와 함께 React Tracked 사용하기</strong></div>
+      <br /> 이전에는 useState를 사용하였지만 이젠 useReducer 사용
+      <br /> useReducer 공식 리액트 훅 -> 상태를 갱싱하는데 사용하는 리듀서 함수를 받음 -> 리듀서 함수는 자바스크립트와 무관하게 사용할수 있는 프로그래밍 패턴
+      <br /> 이 패턴을을 적용하는게 useReducer훅 -> Reducer의 리듀서 패턴을 따름 
+      <br /> useReducer 훅 : React Redux, 스토어 인핸서(sotre enhancer), 미들웨어와 가은 Redux의 다른 기능 다루지 않음
+      <br /> type 속성이 있는 객체여야 하는 Redux와는 다르게 모든 종류의 액션을 허용
+      <br /> .....2에서 계속
       <br /><br /><br /><br /><br /><br /><br /><br />
     </div>
   )

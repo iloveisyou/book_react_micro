@@ -1,6 +1,6 @@
 # book_react_micro
 리액트 훅을 활용한 마이크로 상태 관리 책 공부
-1dsafasdf
+
 ![cover](./msmrh-main/cover.jpg)
 
 # 리액트 훅을 활용한 마이크로 상태 관리
@@ -55,6 +55,7 @@
 - npm install valtio
 - npm install @react-spring/web : transition
 - npm install react-tracked // 렌더링최적화
+- npm install @reduxjs/toolkit // 최신 리덕스 사용법
 
 
 -----------------------------------------------------------------------------------------------------------------------

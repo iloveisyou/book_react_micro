@@ -58,6 +58,7 @@ const MemoedCounter2 = memo(Counter2);
 // div 없이 바로 이어지는 <>인 경우 memo 안됨 태그로 한번 감싸줘야 함
 // 최상의는 무조건 렌더링 되는 듯 그리고 해당 하위 컴포넌트들 보고 메모면 렌더링 안함 신기방기 ★★★★★★
 const Parent2 = () => <div> <MemoedCounter1 /> <MemoedCounter2 /> <DummyA /> <DummyB /> <MemoedDummyB /></div>
+const Parent3 = () => <><MemoedCounter1 /> <MemoedCounter2 /> <DummyA /> <DummyB /> <MemoedDummyB /></>
 
 const DummyA = () => <div>aaaaaaaaaaaaaa</div>;
 const DummyB = () => <div>bbbbbbbbbbbbbb</div>;
@@ -71,7 +72,8 @@ const App2 = () => {
       <button type="button" onClick={()=>setCount1((c)=>c+1)}>{count1} / +1</button>
       <button type="button" onClick={()=>setCount2((c)=>c+1)}>{count2} / +1</button>
       <Parent2 />
-      
+      <br /> div 여부에 따리 리렌더링 일어나는 경우 (메모)
+      <Parent3 />
     </CountContext.Provider>
   )
 }

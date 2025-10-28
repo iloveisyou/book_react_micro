@@ -44,6 +44,9 @@ import { ComponentZustand } from '../pages/chapter06/02_zustand';
 import { ComponentJotai } from '../pages/chapter06/03_jotai';
 import { ComponentValtio } from '../pages/chapter06/04_valtio';
 import { ComponentReactTracked } from '../pages/chapter06/05_reactTracked';
+import { ComponentReactTracked2 } from '../pages/chapter06/05_reactTracked2';
+import { ComponentReactTracked3 } from '../pages/chapter06/05_reactTracked3';
+import { ComponentCompare } from '../pages/chapter06/06_compare';
 
 // import { App } from '../../msmrh-main/chapter10/02_with_usestate/src/App';
 
@@ -109,6 +112,9 @@ export const Router = () => {
         <Route path='03_jotai' element={<ComponentJotai />} />
         <Route path='04_valtio' element={<ComponentValtio />} />
         <Route path='05_reactTracked' element={<ComponentReactTracked />} />
+        <Route path='05_reactTracked2' element={<ComponentReactTracked2 />} />
+        <Route path='05_reactTracked3' element={<ComponentReactTracked3 />} />
+        <Route path='06_compare' element={<ComponentCompare />} />
         
       </Route>
       <Route path="*" element={<Notfound />} />
