@@ -56,6 +56,9 @@
 - npm install @react-spring/web : transition
 - npm install react-tracked // 렌더링최적화
 - npm install @reduxjs/toolkit // 최신 리덕스 사용법
+- npm install recoil // 리코일 라이브러리 설치
+- npm install mobx // mobx 라이브러리 설치
+- npm install mobx-react // mobx 라이브러리 설치
 
 
 -----------------------------------------------------------------------------------------------------------------------
